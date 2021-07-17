@@ -7,13 +7,18 @@ body {
 section {
 	max-width: 1075px;
 	margin: auto;
-	padding: 8%;
+	padding: 4% 8% 4% 8%;
 }
 
 h1 {
 	text-transform: uppercase;
 	color: #fb8b24;
 	font-size: 3em;
+}
+
+span h1 {
+	font-family: 'Londrina Outline', cursive;
+	text-transform: uppercase;
 }
 
 h2 {
