@@ -1,0 +1,40 @@
+title: media
+fields:
+  -
+    handle: replicator
+    field:
+      collapse: false
+      sets:
+        post-pedia:
+          display: post-pedia
+          fields:
+            -
+              handle: assets
+              field:
+                mode: grid
+                container: assets
+                restrict: false
+                allow_uploads: true
+                max_files: 1
+                display: Assets
+                type: assets
+                icon: assets
+                listable: hidden
+            -
+              handle: video
+              field:
+                display: Video
+                type: video
+                icon: video
+                listable: hidden
+            -
+              handle: button_group
+              field:
+                display: 'Button Group'
+                type: button_group
+                icon: button_group
+                listable: hidden
+      display: Replicator
+      type: replicator
+      icon: replicator
+      listable: hidden

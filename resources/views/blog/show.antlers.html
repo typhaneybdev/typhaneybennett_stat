@@ -1,0 +1,56 @@
+<section>
+    <main class="container">
+        <article class="blog-post-container">
+            <p>{{ date }}</p>
+            <h1>{{ title }}</h1>
+            <div>{{ blog-content }}
+                {{ if type == "text" }}
+                <div class="text">
+                    {{ text }}
+                </div>
+                {{ /if }}
+                {{ if assets }}
+                <figure>
+                    <img src="{{ assets }}" alt="{{ alt }}" />
+                    <figcaption>{{ caption }}</figcaption>
+                </figure>
+                {{ /if }}
+                {{ if audio }}
+                <audio controls>
+                    <source src="{{ audio }}" type="audio/ogg">
+                    <source src="{{ audio }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                {{ /if }}
+                <!-- add later for images -->
+                <!-- <div class="two-col-images-wrap"> -->
+                <!--   {{ if two-col-images }}
+                    {{ two-col-images }}
+                    <figure class="img-card">
+                        <img src="{{ url }}" alt="{{ caption }}" />
+                        <figcaption>{{ caption }}</figcaption>
+                    </figure>
+                    {{ /two-col-images }}
+                    {{ /if }} -->
+            </div>
+            {{ if video | is_embeddable }}
+            <!-- Youtube and Vimeo -->
+            <div class="iframe-container">
+                <iframe class="responsive-iframe" src="{{ video | embed_url }}" ...></iframe>
+            </div>
+            {{ /if }}
+            {{ /blog-content }}
+            </div>
+</section>
+
+<!-- <button onclick="togglePlay()" class="" id="showAudio"><i class=""></i>
+    <audio id="audioFile" src="{{ audio }}" type="audio/mpeg"></audio>
+    <div class="">Audio</div>
+</button> -->
+<script>
+// play and pause adio file
+function togglePlay() {
+    var audioFile = document.getElementById("audioFile");
+    return audioFile.paused ? audioFile.play() : audioFile.pause();
+};
+</script>

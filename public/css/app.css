@@ -2,6 +2,7 @@ body {
 	background-color: #090e2c;
 	color: #fefefe;
 	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
 }
 
 section {
@@ -22,7 +23,7 @@ span h1 {
 }
 
 h2 {
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 a {
@@ -32,10 +33,12 @@ a {
 
 a:hover {
 	color: #ec0655;
+	transition: .2s;
 }
 
 svg:hover path {
 	fill: #ec0655;
+	transition: .2s;
 }
 
 .social  {
@@ -48,5 +51,30 @@ svg:hover path {
 	list-style-type: none;
 	display: block;
 	padding-right: 20px;
+}
+
+button {
+	margin: 20px 0px 20px 0px;
+}
+.button {
+	cursor: pointer;
+	padding: 8px 16px;
+	font-size: 18px;
+/*	color: #ec0655;
+	border: solid 2px #ec0655;
+	background-color: transparent;
+	box-shadow: 0.2rem 0.2rem #fb8b24;*/
+
+	color: #fb8b24;
+	border: solid 2px #fb8b24;
+	background-color: transparent;
+	box-shadow: 0.2rem 0.2rem #ec0655;
+}
+
+.button:active {
+	/*background-color: #fb8b24;*/
+	transition: .2s;
+  	box-shadow: none;
+  	transform: translateY(4px);
 }
 

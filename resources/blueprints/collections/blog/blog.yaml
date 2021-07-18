@@ -1,37 +1,103 @@
-title: blog
+title: Blog
 sections:
   main:
+    display: Main
     fields:
       -
         handle: title
         field:
           type: text
           required: true
+          validate:
+            - required
       -
-        handle: content
+        handle: blog-content
         field:
-          type: markdown
-          display: Content
-          localizable: true
-      -
-        handle: author
-        field:
-          type: users
-          display: Author
-          default: current
-          localizable: true
-          max_items: 1
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
-          localizable: true
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+            - h1
+            - h4
+            - h5
+            - h6
+            - underline
+            - strikethrough
+            - subscript
+            - code
+            - codeblock
+            - horizontalrule
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: false
+          target_blank: false
+          reading_time: true
+          fullscreen: true
+          allow_source: true
+          display: blog-content
+          type: bard
+          icon: bard
+          listable: hidden
+          sets:
+            image:
+              display: image
+              fields:
+                -
+                  handle: assets
+                  field:
+                    mode: grid
+                    container: assets
+                    restrict: false
+                    allow_uploads: true
+                    max_files: 1
+                    display: Assets
+                    type: assets
+                    icon: assets
+                    listable: hidden
+            video:
+              display: video
+              fields:
+                -
+                  handle: video
+                  field:
+                    display: Video
+                    type: video
+                    icon: video
+                    listable: hidden
   sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
         field:
           type: slug
           required: true
+          localizable: true
+          validate:
+            - required
+      -
+        handle: date
+        field:
+          type: date
+          required: true
+          validate:
+            - required
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - blog
+          max_items: 1
+          listable: false
           localizable: true
