@@ -15,12 +15,15 @@ body.light {
 }
 
 .navName {
-	font-size: 24px;
+	font-size: 22px;
 	/*font-weight: bold;*/
-	color: #fb8b24;
+	color: white;
 	padding-top: 10px;
 }
 
+.navName span {
+	font-weight: bold;
+}
 
 nav ul {
 	list-style: none;
