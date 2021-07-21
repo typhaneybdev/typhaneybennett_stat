@@ -25,8 +25,8 @@ body.light {
 	font-weight: bold;
 }
 
-.navName .light {
-	color: #fefefe;
+#navName .light {
+	color: #322c2c;
 }
 
 nav ul {
