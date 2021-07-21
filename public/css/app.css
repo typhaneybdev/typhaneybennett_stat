@@ -14,6 +14,11 @@ body.light {
 	cursor: pointer;
 }
 
+.navName .light {
+	color: #322c2c !important;
+}
+
+
 .navName {
 	font-size: 22px;
 	/*font-weight: bold;*/
@@ -23,10 +28,6 @@ body.light {
 
 .navName span {
 	font-weight: bold;
-}
-
-.navName .light {
-	color: #322c2c;
 }
 
 nav ul {
