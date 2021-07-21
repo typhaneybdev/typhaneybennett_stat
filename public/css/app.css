@@ -25,6 +25,10 @@ body.light {
 	font-weight: bold;
 }
 
+.navName .light {
+	color: #fefefe;
+}
+
 nav ul {
 	list-style: none;
 	display: flex;
