@@ -14,7 +14,7 @@ body.light {
 	cursor: pointer;
 }
 
-.navName .light {
+.navName.light {
 	color: #322c2c !important;
 }
 
