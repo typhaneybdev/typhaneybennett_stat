@@ -21,13 +21,13 @@
     <script src="{{ mix src='/js/site.js' }}"></script>
 </head>
 
-<body id="theme" class="">
+<body id="theme" class="wrap light">
     {{ partial:nav }}
     {{ template_content }}
     <script>
     const bulb = document.getElementById('bulb');
     bulb.addEventListener('click', () => {
-           document.getElementById('navName').classList.toggle('light');
+        document.getElementById('navName').classList.toggle('light');
         document.getElementById('theme').classList.toggle('light');
       
     });
