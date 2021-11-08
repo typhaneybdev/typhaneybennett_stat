@@ -1,0 +1,60 @@
+<section>
+    <main class="container">
+        <div class="blog-container">
+
+            {{ collection:blog }}
+        <article class="blog-post-card">
+          <div class="relative">
+                <img class="featured_img relative" src="{{ featured_img_blog }}" alt="">
+
+                {{ tags }}
+                <div class="absolute cat_wrap"><h4>{{ title }}</h4></div>
+                {{ /tags }}
+            </div>
+           
+            <a href="{{ url }}"><h2>{{ title }}</h2></a>
+        </article>
+             {{ /collection:blog }}
+        </div>
+    </main>
+</section>
+
+
+
+
+<style>
+
+.blog-container {
+   display: flex;
+   flex-wrap: wrap;
+    justify-content: left;
+}   
+    
+.blog-post-card {
+    position: relative;
+     width: 30%;
+    margin: 8px;
+    padding: 1%;
+}
+
+@media screen and (max-width: 769px) {
+    .blog-post-card {
+     width: 100%;
+}  
+}
+
+@media screen and (min-width: 770px) and (max-width: 1445px) {
+    .blog-post-card {
+     width: 45%;
+}  
+}
+
+@media screen and (min-width: 1446px) {
+    .blog-post-card {
+     width: 30%;
+}  
+}
+
+
+
+</style>
