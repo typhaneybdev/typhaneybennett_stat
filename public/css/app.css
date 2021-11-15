@@ -225,8 +225,19 @@ button {
     padding:25px;
 }
 
-
+.nav_links {
+    padding-top: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+}
 /*media queries*/
+
+@media screen and (min-width: 1026px) {
+    .nav_link_wrap {
+        width: 20%;
+    }
+}
+
 
 @media screen and (max-width: 1026px) {
     .home-col-1 {
