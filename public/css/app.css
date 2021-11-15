@@ -214,9 +214,29 @@ button {
 }
 
 
+.home-col-1 {
+    width: 30%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.home-col-2 {
+    width: 70%;
+    padding:25px;
+}
 
 
 /*media queries*/
+
+@media screen and (max-width: 1026px) {
+    .home-col-1 {
+    width: 100%;
+}
+
+.home-col-2 {
+    width: 100%;
+}
+}
 
 @media screen and (max-width: 991px) {
     .row {
