@@ -47,6 +47,8 @@ figure {
     /*border-radius: 100%;*/
 /*    max-width: 60%;*/
     filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
+
 }
 
 .wrap {
@@ -261,6 +263,9 @@ button {
 
     .column2 {
         width: 100%;
+    }
+    .entry_text {
+        font-size: 1.3em;
     }
 }
 
