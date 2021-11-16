@@ -267,6 +267,11 @@ button {
     padding:25px;
 }
 
+
+.footer {
+    font-size: 10px;
+    display: block;
+}
 /*media queries*/
 
 @media screen and (min-width: 1026px) {
