@@ -1,26 +1,46 @@
-<!-- ---------------- Primary Navigation Start Desktop ---------------- -->
-<header>
-    <nav id="" class="">
-        <div class="nav-container">
-            <ul>
-            
-                <a  id="navName" href="/" class="navName light"><span>typhaney</span> bennett</a>
-    
-               
-               
-                   
-                    <a href="/blog" class="nav_links">blog</a>
-                     <a href="/" class="nav_links">about</a>
-                  
-             <!--     <a class="">About</a> -->
-                <li>
-                    <svg type="button" id="bulb" class="bulb" width="46" height="46" viewBox="0 0 46 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+<header class="header">
+        <nav class="navbar">
+            <a  id="navName" href="/" class="navName light"><span>typhaney</span> bennett</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                     <svg type="button" id="bulb" class="bulb" width="46" height="46" viewBox="0 0 46 67" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M23.2032 0C10.7972 0 0.705017 9.95792 0.705017 22.1978C0.705017 28.3674 3.28869 35.1197 7.57648 40.2058C7.63078 40.2825 7.68474 40.3611 7.74134 40.4282C9.2533 42.2936 12.373 47.0605 12.373 49.8834C12.373 50.5464 12.5602 51.1611 12.8629 51.7017V60.7669C12.8629 62.7241 14.4562 64.3173 16.4147 64.3173H18.1915L19.0395 65.2936C19.712 66.0754 20.6893 66.5229 21.7245 66.5229H24.6849C25.7151 66.5229 26.6914 66.0754 27.365 65.2995L28.2175 64.3173H29.998C31.9529 64.3173 33.5415 62.7241 33.5415 60.7669V51.8501C33.9008 51.2706 34.1045 50.5961 34.1045 49.8834C34.1045 47.3066 36.8142 42.8036 38.7385 40.4249C38.8714 40.2601 38.9905 40.0811 39.0951 39.8893C43.2368 34.8091 45.705 28.2052 45.705 22.1981C45.7014 9.95792 35.6082 0 23.2032 0ZM29.997 62.0387H27.1768L25.6424 63.8073C25.3999 64.0853 25.0511 64.2479 24.6839 64.2479H21.7235C21.3527 64.2479 21.0052 64.0889 20.7627 63.8073L19.2306 62.0387H16.4137C15.7095 62.0387 15.1396 61.4687 15.1396 60.7679V53.4937C15.4588 53.5809 15.7862 53.6444 16.131 53.6444H30.3448C30.6594 53.6444 30.9641 53.5927 31.2632 53.5147V60.7675C31.2638 61.4674 30.6962 62.0387 29.997 62.0387ZM21.2319 51.3647L15.6973 20.9744L23.2035 27.4125L30.6518 21.0218L24.6895 51.3651H21.2319V51.3647ZM37.2581 38.5349L37.1192 38.7481C37.0722 38.8422 37.0215 38.9248 36.9626 38.9966C35.5342 40.7619 31.8259 46.1622 31.8259 49.8847C31.8259 50.4806 31.4738 51.0153 30.9203 51.2482C30.739 51.3259 30.5459 51.366 30.3458 51.366H27.0106L34.1539 15.018L23.2032 24.4119L12.3059 15.065L18.9147 51.3647H16.131C15.3137 51.3647 14.6497 50.7017 14.6497 49.8834C14.6497 45.4626 9.56359 39.0587 9.50831 38.9906L9.35761 38.7893C5.36562 34.0493 2.98333 27.8458 2.98333 22.1968C2.98333 11.2132 12.0545 2.27766 23.2029 2.27766C34.3513 2.27766 43.4224 11.2132 43.4224 22.1968C43.4228 27.729 41.1181 33.8361 37.2581 38.5349Z" fill="#fb8b24" />
                     </svg>
                 </li>
-           
             </ul>
-        </div>
-    </nav>
-   
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
 </header>
+
+<!-- menu credit https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
+<script type="text/javascript">
+    const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+</script>

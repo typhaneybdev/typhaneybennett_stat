@@ -21,9 +21,11 @@
     <script src="{{ mix src='/js/site.js' }}"></script>
 </head>
 
-<body id="theme" class="wrap light">
+<body id="theme" class="light">
     {{ partial:nav }}
-    {{ template_content }}
+    <div class="wrap">
+        {{ template_content }}
+    </div>
     <script>
     const bulb = document.getElementById('bulb');
     bulb.addEventListener('click', () => {
