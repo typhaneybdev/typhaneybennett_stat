@@ -1,4 +1,6 @@
-
+/*blue #2018fd
+pink #ec0655;
+orange #fb8b24*/
 
 li {
     list-style: none;
@@ -13,6 +15,7 @@ body {
     color: #fefefe;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+    margin: 0px;
 }
 
 body.light {
@@ -30,6 +33,29 @@ img {
 
 figure {
 	margin: 0;
+}
+
+footer {
+    background-color: #ec0655;
+    color: white;
+}
+
+.orange {
+  color: #fb8b24;
+}
+
+
+.opt {
+    background: #2018fd;
+}
+
+.bluebg {
+    background:#2018fd !important;
+    padding: 30px 25px 50px 25px;
+}
+
+.grade {
+    background-image: linear-gradient(to bottom, #ffffff, #f6e6f9, #fccae4, #ffadbe, #ff958a, #ff876f, #ff7c52, #fd722e, #fc5e37, #f94841, #f42f4b, #ec0655);
 }
 
 .text {
@@ -58,6 +84,28 @@ figure {
     filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
     -webkit-filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
 
+}
+
+.read:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+  border: solid #ec0655;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.righta {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+
+
+.home_hero {
+    padding-bottom: 60px;
 }
 
 .wrap {
@@ -184,6 +232,7 @@ svg:hover path {
 button {
     margin: 20px 0px 20px 0px;
 }
+
 
 .button {
     cursor: pointer;
