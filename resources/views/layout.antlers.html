@@ -22,7 +22,7 @@
     
 </head>
 
-<body id="theme" class="light">
+<body id="theme" class="">
     {{ partial:nav }}
     <div class="">
         {{ template_content }}
@@ -31,8 +31,8 @@
     <script>
     const bulb = document.getElementById('bulb');
     bulb.addEventListener('click', () => {
-        document.getElementById('navName').classList.toggle('light');
-        document.getElementById('typh').classList.toggle('light');
+        // document.getElementById('navName').classList.toggle('light');
+        // document.getElementById('typh').classList.toggle('light');
         document.getElementById('theme').classList.toggle('light');
       
     });

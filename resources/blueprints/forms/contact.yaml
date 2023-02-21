@@ -1,0 +1,32 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: name
+        field:
+          placeholder: name
+          input_type: text
+          antlers: false
+          display: name
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: email
+        field:
+          placeholder: email
+          input_type: text
+          antlers: false
+          display: email
+          type: text
+          icon: text
+          listable: hidden
+      -
+        handle: textarea
+        field:
+          antlers: false
+          display: Textarea
+          type: textarea
+          icon: textarea
+          listable: hidden
