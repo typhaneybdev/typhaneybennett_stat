@@ -21,6 +21,7 @@ sections:
           type: assets
           icon: assets
           listable: hidden
+
       -
         handle: blog-content
         field:
@@ -85,6 +86,7 @@ sections:
                     type: video
                     icon: video
                     listable: hidden
+                    instructions: 'use embed link'
   sidebar:
     display: Sidebar
     fields:
@@ -112,3 +114,11 @@ sections:
           max_items: 1
           listable: false
           localizable: true
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: select

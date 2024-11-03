@@ -75,10 +75,10 @@ social:
   -
     link: null
 updated_by: 6a424aa2-05d5-4d2d-b784-beac25b6bfa6
-updated_at: 1730602734
+updated_at: 1730656842
 blueprint: home
 assets: IMG_3945.jpg
 template: home
-header: 'Hey there, I’m Typhaney!'
+header: 'Hi, I’m Typhaney!'
 id: 4e245477-5b19-49e8-823b-8ec459db8b22
 ---

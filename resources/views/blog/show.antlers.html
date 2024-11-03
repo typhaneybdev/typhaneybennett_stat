@@ -1,14 +1,16 @@
 <section class="wrap">
     <main class="container">
-        <article class="blog-post-container">
+        <article data-aos="fade-up" class="blog-post-container">
             <p>{{ date }}</p>
             <h2 class="title">{{ title }}</h2>
             <div class="relative">
                 {{ tags }}
                 <!-- add taxonomy pages -->
-             <div id="cat" class="absolute cat_wrap"><a href="{{ url }}"><h4>{{ title }}</h4></a></div>
+                <div id="cat" class="absolute cat_wrap"><a href="{{ url }}">
+                        <h4>{{ title }}</h4>
+                    </a></div>
                 {{ /tags }}
-            <img class="featured_img relative" src="{{ featured_img_blog }}" alt="">
+                <img class="featured_img relative" src="{{ featured_img_blog }}" alt="{{ featured_img_blog:alt }}">
             </div>
             <div>{{ blog-content }}
                 {{ if type == "text" }}
@@ -18,7 +20,7 @@
                 {{ /if }}
                 {{ if assets }}
                 <figure>
-                    <img src="{{ assets }}" alt="{{ alt }}" />
+                    <img src="{{ assets }}" alt="{{ assets:alt }}" />
                     <figcaption>{{ caption }}</figcaption>
                 </figure>
                 {{ /if }}
@@ -39,17 +41,44 @@
                     </figure>
                     {{ /two-col-images }}
                     {{ /if }} -->
+                {{ if video | is_embeddable }}
+                <!-- Youtube and Vimeo -->
+                <div class="iframe-container">
+                    <iframe class="responsive-iframe" src="{{ video | embed_url }}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                {{ /if }}
+                {{ /blog-content }}
             </div>
-            {{ if video | is_embeddable }}
-            <!-- Youtube and Vimeo -->
-            <div class="iframe-container">
-                <iframe class="responsive-iframe" src="{{ video | embed_url }}" ...></iframe>
-            </div>
-            {{ /if }}
-            {{ /blog-content }}
-            </div>
-</section>
+        </article>
 
+    <div style="margin-top: 50px">
+        <h4>READ MORE</h4>
+        {{ collection:previous in="blog" as="posts" limit="1" sort="date:asc" }}
+        {{ if no_results }}
+        No more posts to read!
+        {{ /if }}
+        {{ posts }}
+        <div style="margin-bottom: 15px" class="post">
+<svg width="20" height="12" viewBox="0 0 20 20">
+    <polygon points="10,0 0,10 10,20" fill="white" />
+</svg> <a href="{{ url }}">{{ title }}</a>
+        </div>
+        {{ /posts }}
+        {{ /collection:previous }}
+        {{ collection:next in="blog" as="posts" limit="1" sort="date:asc" }}
+        {{ if no_results }}
+        No more posts to read!
+        {{ /if }}
+        {{ posts }}
+        <div class="post">
+            <a href="{{ url }}">{{ title }} <svg width="20" height="12" viewBox="0 0 20 20">
+    <polygon points="0,0 10,10 0,20" fill="white" />
+</svg></a>
+        </div>
+        {{ /posts }}
+        {{ /collection:next }}
+    </div>
+</section>
 <!-- <button onclick="togglePlay()" class="" id="showAudio"><i class=""></i>
     <audio id="audioFile" src="{{ audio }}" type="audio/mpeg"></audio>
     <div class="">Audio</div>
@@ -60,4 +89,5 @@ function togglePlay() {
     var audioFile = document.getElementById("audioFile");
     return audioFile.paused ? audioFile.play() : audioFile.pause();
 };
+
 </script>
