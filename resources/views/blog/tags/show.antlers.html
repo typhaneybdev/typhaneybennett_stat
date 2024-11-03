@@ -2,7 +2,7 @@
     <main class="container">
         <div class="blog-container">
 
-            {{ entries }}
+            {{ entries sort="date:desc" }}
         <article data-aos="fade-up" class="blog-post-card">
           <div class="relative">
                 <img class="featured_img relative" src="{{ featured_img_blog }}" alt="">
