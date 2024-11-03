@@ -35,7 +35,7 @@ body {
 }
 
 body.light {
-    background-color: #2018fd;
+    background-color: #706b6e;
     color: white;
 }
 
@@ -398,7 +398,7 @@ button {
     margin-left: 15px;
     line-height: .5;
     z-index: 5;
-    background:#2018fd;
+    background:#706b6e;
     box-shadow: 0.2rem 0.2rem #ccff00;
     border: 1px solid #ccff00;
 }
