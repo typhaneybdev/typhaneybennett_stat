@@ -22,12 +22,14 @@
     
 </head>
 
-<body id="theme" class="">
+<body id="theme" class="contentwrap">
     {{ partial:nav }}
-    <div class="">
+    <div class="content">
         {{ template_content }}
     </div>
     {{ partial:footer }}
+
+
     <script>
     const bulb = document.getElementById('bulb');
     bulb.addEventListener('click', () => {

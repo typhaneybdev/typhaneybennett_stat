@@ -2,6 +2,22 @@
 pink #ec0655;
 orange #fb8b24*/
 
+html, body {
+    height: 100%; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+}
+
+.contentwrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+.content {
+    flex: 1; /* Allow content to grow */
+}
+
+
 li {
     list-style: none;
 }
@@ -87,11 +103,8 @@ footer {
 }
 
 .typh {
-    /*border-radius: 100%;*/
-/*    max-width: 60%;*/
-    filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
-    -webkit-filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.2));
-
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 60px;
 }
 
 .optSection {
@@ -285,6 +298,7 @@ h1 {
     text-transform: uppercase;
     color: #ccff00;
     font-size: 3em;
+    margin-bottom: 0px;
 }
 
 span h1 {
@@ -415,8 +429,8 @@ button {
 
 
 #typh {
--webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 60px;
 }
 
 #typh.light {
